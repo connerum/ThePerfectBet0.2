@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bsu.cs222.theperfectbet.ThePerfectBetController">
+   <children>
+      <Button fx:id="calculate_btn" layoutX="262.0" layoutY="343.0" mnemonicParsing="false" onAction="#calculateOdds" text="Calculate">
+         <font>
+            <Font name="Dubai Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="117.0" layoutY="66.0" text="Choose Your Sport:">
+         <font>
+            <Font name="Dubai Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="81.0" layoutY="136.0" text="Home Teams">
+         <font>
+            <Font name="Dubai Bold" size="20.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="sports_cb" layoutX="304.0" layoutY="74.0" onAction="#onSportSelect" prefHeight="26.0" prefWidth="178.0" />
+      <Label layoutX="88.0" layoutY="252.0" text="Away Team">
+         <font>
+            <Font name="Dubai Bold" size="20.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="homeTeam_cb" layoutX="48.0" layoutY="173.0" onAction="#homeTeamSelect" prefHeight="26.0" prefWidth="178.0" />
+      <ChoiceBox fx:id="awayTeam_cb" layoutX="48.0" layoutY="288.0" onAction="#awayTeamSelect" prefHeight="26.0" prefWidth="178.0" />
+      <Label layoutX="220.0" layoutY="2.0" text="The Perfect Bet">
+         <font>
+            <Font name="Dubai Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="393.0" layoutY="133.0" text="Odds:">
+         <font>
+            <Font name="Dubai Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="home_lb" layoutX="321.0" layoutY="184.0" text="Home">
+         <font>
+            <Font name="Dubai Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="away_lb" layoutX="323.0" layoutY="254.0" text="Away">
+         <font>
+            <Font name="Dubai Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="teamOneOdds_lb" layoutX="414.0" layoutY="215.0" text="0">
+         <font>
+            <Font name="Dubai Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="teamTwoOdds_lb" layoutX="414.0" layoutY="283.0" text="0">
+         <font>
+            <Font name="Dubai Bold" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="refresh_img" fitHeight="26.0" fitWidth="27.0" layoutX="491.0" layoutY="74.0" onMouseClicked="#refreshSports" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@refresh.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
